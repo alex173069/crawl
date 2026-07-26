@@ -1,0 +1,14 @@
+## CHECK LATER, MOSTLIKELY SOMETHING IS STILL MISSING
+
+node_modules
+.git
+.gitignore
+.editorconfig
+.prettierignore
+prettier.config.ts
+eslint.config.ts
+apps/*/node_modules
+packages/*/node_modules
+*.md
+.env
+.env./*/.local

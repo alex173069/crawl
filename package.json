@@ -1,13 +1,24 @@
 {
-  "name": "Crawl",
+  "name": "crawl",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api start:dev",
+    "build": "pnpm --filter @crawl/shared build && pnpm --filter @crawl/db build && pnpm --filter api build && pnpm --filter web build",
+    "lint": "pnpm --filter api lint && pnpm --filter web lint",
+    "test": "pnpm --filter api test && pnpm --filter web test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lightningcss"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "prettier": "^3.9.5",
+    "typescript-eslint": "^8.64.0"
+  }
 }
