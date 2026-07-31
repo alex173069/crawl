@@ -10,10 +10,6 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./schema": {
-      "import": "./dist/schema.js",
-      "types": "./dist/schema.d.ts"
-    },
     "./client": {
       "import": "./dist/client.js",
       "types": "./dist/client.d.ts"
@@ -28,12 +24,13 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "drizzle-orm": "^0.44.0",
-    "pg": "^8.16.0"
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "1.0.0-rc.4",
+    "pg": "^8.22.0"
   },
   "devDependencies": {
-    "@types/pg": "^8.15.6",
-    "drizzle-kit": "^0.31.0",
-    "typescript": "^5.7.3"
+    "@types/pg": "^8.20.1",
+    "drizzle-kit": "1.0.0-rc.4",
+    "typescript": "^7.0.2"
   }
 }
